@@ -4,8 +4,14 @@ export const Flags = {
   sidebar: new Rox.Flag(false)
 }
 
-const options = {
+async function initRollout () {
+  const options = {
+  }
+
+  Rox.register('default', Flags)
+  await Rox.setup(process.env.VUE_APP_ROLLOUT_KEY, options)
 }
 
-Rox.register('default', Flags)
-Rox.setup(process.env.VUE_APP_ROLLOUT_KEY, options)
+initRollout().then(function () {
+  console.log('Done loading Rollout')
+})
