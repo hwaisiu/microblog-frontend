@@ -1,6 +1,6 @@
 # production stage
 FROM nginx:stable-alpine
-COPY /app/dist /usr/share/nginx/html
+COPY /dist /usr/share/nginx/html
 COPY .env /usr/share/nginx/html/.env
 COPY .env.production /usr/share/nginx/html/.env.production
 COPY .env.development /usr/share/nginx/html/.env.development
