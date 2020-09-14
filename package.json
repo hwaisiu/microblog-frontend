@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:dev": "vue-cli-service build --mode development",
+    "build": "vue-cli-service build --skip-plugins @vue/cli-plugin-eslint",
+    "build:dev": "vue-cli-service build --mode development --skip-plugins @vue/cli-plugin-eslint",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint --fix"
   },
